@@ -1,0 +1,36 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+
+public class MyJavaProgram extends JFrame implements ActionListener{
+	private static final long serialVersionUID = 1L;
+
+	public MyJavaProgram(){
+		JFrame f = new JFrame("Tools");
+		f.setSize(600,600);
+		f.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		f.setVisible(true);
+		JButton button1 = new JButton("Application Form");
+		f.add(button1);
+		button1.addActionListener(this);
+                f.setLayout(new FlowLayout());
+	}
+	
+	public static void main(String[] args){ 
+		new MyJavaProgram();//Reads method main()
+	}
+
+	public void actionPerformed(ActionEvent e) {
+            System.out.println("button1 clicked");
+            JFrame s = new JFrame("Application Form - Tools");
+            s.setSize(600,600);
+		s.setVisible(true);
+                s.setResizable(false);
+                JTextField j1 = new JTextField ("Enter Name here" , 25);
+                s.add(j1);
+                s.setDefaultCloseOperation(EXIT_ON_CLOSE);
+                
+                
+	}
+}
